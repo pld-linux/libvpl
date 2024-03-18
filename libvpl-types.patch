@@ -1,0 +1,11 @@
+--- libvpl-2.10.2/tools/legacy/sample_common/src/vaapi_utils.cpp.orig	2024-02-20 22:41:06.000000000 +0100
++++ libvpl-2.10.2/tools/legacy/sample_common/src/vaapi_utils.cpp	2024-03-18 21:55:02.069401544 +0100
+@@ -337,7 +337,7 @@ VAStatus CLibVA::AcquireVASurface(void**
+     }
+ 
+     AcquireCtx* ctx;
+-    unsigned long handle = 0;
++    uintptr_t handle = 0;
+     VAStatus va_res;
+     VASurfaceAttrib attribs[2];
+     VASurfaceAttribExternalBuffers extsrf;

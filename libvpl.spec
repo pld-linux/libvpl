@@ -9,6 +9,7 @@ Group:		Libraries
 #Source0Download: https://github.com/intel/libvpl/releases
 Source0:	https://github.com/intel/libvpl/archive/v%{version}/libvpl-%{version}.tar.gz
 # Source0-md5:	09d6347097590abd3e952619f5ed6316
+Patch0:		%{name}-types.patch
 URL:		https://www.intel.com/content/www/us/en/developer/tools/vpl/overview.html
 BuildRequires:	cmake >= 3.13.0
 BuildRequires:	libdrm-devel
@@ -21,7 +22,6 @@ BuildRequires:	wayland-devel
 BuildRequires:	xorg-lib-libpciaccess-devel
 Obsoletes:	oneVPL < 2024
 Obsoletes:	python3-oneVPL < 2023
-ExclusiveArch:	%{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -64,6 +64,7 @@ Przykładowe programy do biblioteki Intel VPL.
 
 %prep
 %setup -q -n libvpl-%{version}
+%patch0 -p1
 
 %build
 %cmake -B build
