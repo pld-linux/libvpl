@@ -1,0 +1,18 @@
+--- libvpl-2.11.0/libvpl/cmake/VPLConfig.cmake.in.orig	2024-05-01 21:29:38.000000000 +0200
++++ libvpl-2.11.0/libvpl/cmake/VPLConfig.cmake.in	2024-05-26 20:36:07.815852055 +0200
+@@ -74,6 +74,7 @@ else()
+         VPL::dispatcher
+         PROPERTIES IMPORTED_LOCATION_RELEASE ${_dispatcher_shlib}
+                    IMPORTED_LOCATION_RELWITHDEBINFO ${_dispatcher_shlib}
++                   IMPORTED_LOCATION_PLD ${_dispatcher_shlib}
+                    IMPORTED_LOCATION_MINSIZEREL ${_dispatcher_shlib}
+                    IMPORTED_LOCATION_DEBUG ${_dispatcher_debug_shlib}
+                    IMPORTED_LOCATION_RELWITHDEBRT ${_dispatcher_debug_shlib})
+@@ -99,6 +100,7 @@ else()
+         VPL::dispatcher
+         PROPERTIES IMPORTED_LOCATION_RELEASE ${_dispatcher_lib}
+                    IMPORTED_LOCATION_RELWITHDEBINFO ${_dispatcher_lib}
++                   IMPORTED_LOCATION_PLD ${_dispatcher_lib}
+                    IMPORTED_LOCATION_MINSIZEREL ${_dispatcher_lib}
+                    IMPORTED_LOCATION_DEBUG ${_dispatcher_debug_lib}
+                    IMPORTED_LOCATION_RELWITHDEBRT ${_dispatcher_debug_lib})
