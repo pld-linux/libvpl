@@ -1,13 +1,13 @@
 Summary:	Intel Video Processing Library
 Summary(pl.UTF-8):	Biblioteka przetwarzania obrazu Intel VPL
 Name:		libvpl
-Version:	2.11.0
+Version:	2.14.0
 Release:	1
 License:	MIT
 Group:		Libraries
 #Source0Download: https://github.com/intel/libvpl/releases
 Source0:	https://github.com/intel/libvpl/archive/v%{version}/libvpl-%{version}.tar.gz
-# Source0-md5:	a9984f61d0e0c3e282e56d63aaade862
+# Source0-md5:	807bb965093b3396da321d16d6f711f3
 Patch0:		%{name}-pld.patch
 URL:		https://www.intel.com/content/www/us/en/developer/tools/vpl/overview.html
 BuildRequires:	cmake >= 3.13.0
@@ -58,7 +58,7 @@ Przykładowe programy do biblioteki Intel VPL.
 
 %prep
 %setup -q -n libvpl-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %cmake -B build
