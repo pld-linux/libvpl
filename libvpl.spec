@@ -1,13 +1,13 @@
 Summary:	Intel Video Processing Library
 Summary(pl.UTF-8):	Biblioteka przetwarzania obrazu Intel VPL
 Name:		libvpl
-Version:	2.14.0
+Version:	2.16.0
 Release:	1
 License:	MIT
 Group:		Libraries
 #Source0Download: https://github.com/intel/libvpl/releases
 Source0:	https://github.com/intel/libvpl/archive/v%{version}/libvpl-%{version}.tar.gz
-# Source0-md5:	807bb965093b3396da321d16d6f711f3
+# Source0-md5:	1cff23c778a647522bcc669d93e1d8b5
 Patch0:		%{name}-pld.patch
 URL:		https://www.intel.com/content/www/us/en/developer/tools/vpl/overview.html
 BuildRequires:	cmake >= 3.13.0
@@ -86,14 +86,14 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc CHANGELOG.md LICENSE README.md SECURITY.md third-party-programs.txt
-%attr(755,root,root) %{_libdir}/libvpl.so.*.*
-%attr(755,root,root) %ghost %{_libdir}/libvpl.so.2
+%{_libdir}/libvpl.so.*.*
+%ghost %{_libdir}/libvpl.so.2
 %dir %{_sysconfdir}/vpl
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/vpl/vars.sh
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libvpl.so
+%{_libdir}/libvpl.so
 %{_includedir}/vpl
 %{_libdir}/cmake/vpl
 %{_pkgconfigdir}/vpl.pc
