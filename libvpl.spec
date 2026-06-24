@@ -2,7 +2,7 @@ Summary:	Intel Video Processing Library
 Summary(pl.UTF-8):	Biblioteka przetwarzania obrazu Intel VPL
 Name:		libvpl
 Version:	2.16.0
-Release:	1
+Release:	2
 License:	MIT
 Group:		Libraries
 #Source0Download: https://github.com/intel/libvpl/releases
@@ -35,7 +35,7 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki Intel VPL
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel >= 6:4.7
-Obsoletes:	oneVPL < 2024
+Obsoletes:	oneVPL-devel < 2024
 
 %description devel
 Header files for Intel VPL library.
